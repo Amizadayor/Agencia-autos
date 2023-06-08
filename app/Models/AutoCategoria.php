@@ -16,14 +16,13 @@ class AutoCategoria extends Model
      *
      * @var string
      */
-    protected $table = 'Auto_Categorias';
+    protected $table = 'auto_categorias';
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $table = 'autos_categorias';
-
     protected $fillable = [
         'id_auto',
         'id_categoria',
