@@ -23,9 +23,9 @@ El CRM Agencia de Autos es una aplicación web diseñada específicamente para a
 ## Requisitos del sistema
 
 ```
-- PHP >= 7.4
-- Laravel Framework >= 8.x
-- MySQL o cualquier otro sistema de gestión de bases de datos compatible
+    > PHP >= 7.4
+    > Laravel Framework >= 8.x
+    > MySQL o cualquier otro sistema de gestión de bases de datos compatible
 
 ```
 
@@ -33,25 +33,39 @@ El CRM Agencia de Autos es una aplicación web diseñada específicamente para a
 
 1. Clona este repositorio en tu máquina local:
 
-> git clone https://github.com/Amizadayor/Agencia-autos.git
+```
+    git clone https://github.com/Amizadayor/Agencia-autos.git
+
+```
 
 2. Navega hasta el directorio del proyecto:
 
-> cd tu-repositorio
+```
+    cd tu-repositorio
+```
 
 3. Instala las dependencias del proyecto:
 
-> composer install
+```
+    composer install
+```
 
 4. Crea una copia del archivo .env.example y renómbralo como .env. Luego, configura la conexión a tu base de datos en el archivo .env.
 
 5. Ejecuta las migraciones para crear las tablas de la base de datos:
 
-> php artisan migrate
+```
+    php artisan migrate
+```
 
 6. Inicia el servidor de desarrollo:
 
-> php artisan serve
+```
+    php artisan serve
+```
 
 7. Accede a la aplicación en tu navegador web en la siguiente URL:
+
+```
 http://localhost:8000
+```
