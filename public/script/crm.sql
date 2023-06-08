@@ -2,35 +2,36 @@ DROP DATABASE IF EXISTS crm;
 CREATE DATABASE crm;
 USE crm;
 
-CREATE TABLE Usuarios (
+CREATE TABLE User (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    usuario VARCHAR(50) NOT NULL,
-    password VARCHAR(255) NOT NULL,
-    rol ENUM('cliente', 'administrador', 'empleado') NOT NULL,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    email VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Clientes (
     id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
     nombre VARCHAR(50),
     apellido_paterno VARCHAR(50),
     apellido_materno VARCHAR(50),
     direccion VARCHAR(100),
-    correo_electronico VARCHAR(100),
     telefono VARCHAR(20),
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES User(id)
 );
 
 CREATE TABLE Empleados (
     id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
     nombre VARCHAR(50),
     apellido_paterno VARCHAR(50),
     apellido_materno VARCHAR(50),
-    correo_electronico VARCHAR(100),
     telefono VARCHAR(20),
     rfc VARCHAR(20),
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES User(id)
 );
+
 
 CREATE TABLE Empleados_Clientes (
     id INT PRIMARY KEY AUTO_INCREMENT,
