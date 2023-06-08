@@ -22,9 +22,9 @@ El CRM Agencia de Autos es una aplicación web diseñada específicamente para a
 
 ## Requisitos del sistema
 
-> PHP >= 7.4
-> Laravel Framework >= 8.x
-> MySQL o cualquier otro sistema de gestión de bases de datos compatible
+- **PHP >= 7.4**
+- **Laravel Framework >= 8.x**
+- **MySQL o cualquier otro sistema de gestión de bases de datos compatible**
 
 ## Instalación
 
