@@ -38,7 +38,7 @@ El CRM Agencia de Autos es una aplicación web diseñada específicamente para a
 2. Navega hasta el directorio del proyecto:
 
 ```
-    cd tu-repositorio
+    cd Agencia-autos
 ```
 
 3. Instala las dependencias del proyecto:
