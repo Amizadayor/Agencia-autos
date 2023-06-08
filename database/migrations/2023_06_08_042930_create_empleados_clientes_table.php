@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('empleados_clientes', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_empleado');
+            $table->unsignedBigInteger('id_cliente');
+
+            $table->foreign('id_empleado')->references('id')->on('empleados')->onDelete('cascade');
+            $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
+
+            $table->unique(['id_empleado', 'id_cliente']);
             $table->timestamps();
         });
     }

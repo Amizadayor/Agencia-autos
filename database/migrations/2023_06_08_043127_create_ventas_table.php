@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('ventas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_auto');
+            $table->unsignedBigInteger('id_cliente');
+            $table->unsignedBigInteger('id_empleado');
+            $table->unsignedBigInteger('id_mantenimiento');
+            $table->date('fecha_venta');
+            $table->decimal('precio_venta', 10, 2);
+            $table->foreign('id_auto')->references('id')->on('autos')->onDelete('cascade');
+            $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
+            $table->foreign('id_empleado')->references('id')->on('empleados')->onDelete('cascade');
+            $table->foreign('id_mantenimiento')->references('id')->on('mantenimientos')->onDelete('cascade');
             $table->timestamps();
         });
     }

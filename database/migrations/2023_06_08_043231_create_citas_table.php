@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('citas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_cliente');
+            $table->unsignedBigInteger('id_empleado');
+            $table->date('fecha_cita');
+            $table->time('hora_cita');
+            $table->enum('tipo_cita', ['prueba_manejo', 'mantenimiento', 'entrega']);
+            $table->string('descripcion', 200);
+            $table->enum('estado_cita', ['pendiente', 'confirmada', 'cancelada', 'completada'])->default('pendiente');
+            $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('cascade');
+            $table->foreign('id_empleado')->references('id')->on('empleados')->onDelete('cascade');
             $table->timestamps();
         });
     }

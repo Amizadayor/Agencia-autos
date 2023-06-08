@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('categorias_autos', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre_categoria', 50);
             $table->timestamps();
         });
     }

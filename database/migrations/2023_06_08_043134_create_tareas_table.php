@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('tareas', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_empleado');
+            $table->string('descripcion_tarea', 200)->nullable(false);
+            $table->date('fecha_asignacion')->nullable();
+            $table->enum('estado_tarea', ['pendiente', 'en_proceso', 'completado', 'cancelado'])->default('pendiente');
+            $table->foreign('id_empleado')->references('id')->on('empleados')->onDelete('cascade');
             $table->timestamps();
         });
     }

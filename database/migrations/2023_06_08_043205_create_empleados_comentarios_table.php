@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('empleados_comentarios', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_empleado');
+            $table->unsignedBigInteger('id_comentario');
+            $table->foreign('id_empleado')->references('id')->on('empleados')->onDelete('cascade');
+            $table->foreign('id_comentario')->references('id')->on('comentarios')->onDelete('cascade');
+            $table->unique(['id_empleado', 'id_comentario']);
             $table->timestamps();
         });
     }
