@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\Cliente;
+use App\Models\Empleado;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -18,7 +20,6 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
         'email',
         'password',
     ];
@@ -39,7 +40,22 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+        /**
+     * Get the Cliente record associated with the User.
+     */
+    public function cliente()
+    {
+        return $this->hasOne(Cliente::class);
+    }
+
+    /**
+     * Get the Empleado record associated with the User.
+     */
+    public function empleado()
+    {
+        return $this->hasOne(Empleado::class);
+    }
 }
