@@ -17,7 +17,7 @@ class Cotizacion extends Model
      *
      * @var string
      */
-    protected $table = 'Cotizaciones';
+    protected $table = 'cotizaciones';
 
     /**
      * The attributes that are mass assignable.

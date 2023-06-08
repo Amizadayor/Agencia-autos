@@ -16,7 +16,7 @@ class Cita extends Model
      *
      * @var string
      */
-    protected $table = 'Citas';
+    protected $table = 'citas';
 
     /**
      * The attributes that are mass assignable.

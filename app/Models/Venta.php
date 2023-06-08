@@ -18,7 +18,7 @@ class Venta extends Model
      *
      * @var string
      */
-    protected $table = 'Ventas';
+    protected $table = 'ventas';
 
     /**
      * The attributes that are mass assignable.

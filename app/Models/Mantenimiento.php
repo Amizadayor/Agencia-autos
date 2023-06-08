@@ -17,7 +17,7 @@ class Mantenimiento extends Model
      *
      * @var string
      */
-    protected $table = 'Mantenimiento';
+    protected $table = 'mantenimientos';
 
     /**
      * The attributes that are mass assignable.

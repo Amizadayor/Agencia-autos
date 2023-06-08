@@ -16,7 +16,7 @@ class EmpleadoComentario extends Model
      *
      * @var string
      */
-    protected $table = 'Empleado_Comentarios';
+    protected $table = 'empleados_comentarios';
     /**
      * The attributes that are mass assignable.
      *

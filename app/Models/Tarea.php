@@ -15,7 +15,7 @@ class Tarea extends Model
      *
      * @var string
      */
-    protected $table = 'Tareas';
+    protected $table = 'tareas';
 
     /**
      * The attributes that are mass assignable.

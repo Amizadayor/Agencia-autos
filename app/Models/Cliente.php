@@ -15,7 +15,7 @@ class Cliente extends Model
      *
      * @var string
      */
-    protected $table = 'Clientes';
+    protected $table = 'clientes';
 
     /**
      * The attributes that are mass assignable.

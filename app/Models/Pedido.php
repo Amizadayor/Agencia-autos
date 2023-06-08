@@ -17,7 +17,7 @@ class Pedido extends Model
      *
      * @var string
      */
-    protected $table = 'Pedidos';
+    protected $table = 'pedidos';
     /**
      * The attributes that are mass assignable.
      *

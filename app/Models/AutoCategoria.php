@@ -22,7 +22,7 @@ class AutoCategoria extends Model
      *
      * @var array
      */
-    protected $table = 'Autos_Categorias';
+    protected $table = 'autos_categorias';
 
     protected $fillable = [
         'id_auto',

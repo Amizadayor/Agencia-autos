@@ -15,7 +15,7 @@ class Empleado extends Model
      *
      * @var string
      */
-    protected $table = 'Empleados';
+    protected $table = 'empleados';
 
     /**
      * The attributes that are mass assignable.

@@ -16,7 +16,7 @@ class Comentario extends Model
      *
      * @var string
      */
-    protected $table = 'Comentarios';
+    protected $table = 'comentarios';
     /**
      * The attributes that are mass assignable.
      *
